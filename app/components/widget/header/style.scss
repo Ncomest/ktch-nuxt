@@ -1,0 +1,119 @@
+.the-header {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--white);
+  border-bottom: 1px solid var(--light-gray);
+
+  padding: var(--padding-m) 0;
+  height: var(--header-height-desktop);
+  z-index: 50;
+
+  @media (max-width: 1440px) {
+    padding: var(--padding-l);
+  }
+
+  @media (max-width: 1200px) {
+    padding: var(--padding-l);
+  }
+
+  @media (max-width: 768px) {
+    padding: var(--padding-s);
+    height: var(--header-height-mobile);
+  }
+
+  &__navbar {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    column-gap: var(--gap-l);
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  &__cross-close {
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+
+  /* From Uiverse.io by aasisodiya */
+  &__button-buy {
+    background-color: rgb(233, 96, 96);
+    border: none;
+    padding: var(--padding-m) var(--padding-s);
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-l);
+    color: var(--white);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
+
+    @media (max-width: 1200px) {
+      font-size: var(--font-size-m);
+      margin-right: 0;
+    }
+  }
+
+  &__button-buy:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+  }
+
+  &__button-buy:hover:not(:disabled) {
+    background-color: rgb(222, 61, 61);
+    color: white;
+    // text-shadow: 0 0.1rem #bcb4b4;
+  }
+
+  &__button-buy:disabled {
+    cursor: auto;
+    color: grey;
+  }
+
+  &__number-container {
+    display: flex;
+    align-items: center;
+    margin-left: var(--margin-l);
+    column-gap: var(--gap-s);
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__number {
+    text-decoration: none;
+    color: inherit;
+    font-weight: var(--font-weigth-m);
+    font-size: var(--font-size-l);
+    color: var(--light-red);
+  }
+
+  &__catalog,
+  &__our-designer {
+    @media (max-width: 1200px) {
+      font-size: var(--font-size-m);
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}

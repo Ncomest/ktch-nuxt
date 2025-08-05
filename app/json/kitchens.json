@@ -1,0 +1,104 @@
+[
+  [
+    {
+      "id": 1,
+      "src": "/images/kitchens/kitchen_1_11zon.webp",
+      "discount": 10,
+      "news": "акция действует до 31 августа",
+      "price": 345000,
+      "sale": false
+    },
+    {
+      "id": 2,
+      "src": "/images/kitchens/kitchen_2_11zon.webp",
+      "discount": null,
+      "price": 280000,
+      "news": "Распродажа с выставки -50%",
+      "sale": true
+    },
+    {
+      "id": 3,
+      "src": "/images/kitchens/kitchen_3_11zon.webp",
+      "discount": 40,
+      "price": 385000,
+      "news": "Хит продаж -40%",
+      "sale": false
+    },
+    {
+      "id": 4,
+      "src": "/images/kitchens/kitchen_4_11zon.webp",
+      "discount": 20,
+      "price": 470000,
+      "news": "Сроки изготовления 20 дней",
+      "sale": false
+    }
+  ],
+  [
+    {
+      "id": 5,
+      "src": "/images/kitchens/kitchen_5_11zon.webp",
+      "discount": null,
+      "price": 550000,
+      "news": "Долгий срок службы",
+      "sale": true
+    },
+    {
+      "id": 6,
+      "src": "/images/kitchens/kitchen_6_11zon.webp",
+      "discount": null,
+      "price": 440000,
+      "news": "Попробуй новый стиль",
+      "sale": true
+    },
+    {
+      "id": 7,
+      "src": "/images/kitchens/kitchen_7_11zon.webp",
+      "discount": 25,
+      "price": 490000,
+      "news": "Распродажа",
+      "sale": false
+    },
+    {
+      "id": 8,
+      "src": "/images/kitchens/kitchen_8_11zon.webp",
+      "discount": 15,
+      "price": 610000,
+      "news": "акция действует до 31 сентября",
+      "sale": false
+    }
+  ],
+  [
+    {
+      "id": 9,
+      "src": "/images/kitchens/kitchen_9_11zon.webp",
+      "discount": 10,
+      "price": 290000,
+      "news": "акция действует до 31 сентября",
+      "sale": false
+    },
+    {
+      "id": 10,
+      "src": "/images/kitchens/kitchen_1/kitchen_1-2_11zon.webp",
+      "discount": 35,
+      "price": 435000,
+      "news": "Супер предложение",
+      "sale": false
+    },
+    {
+      "id": 11,
+      "src": "/images/kitchens/kitchen_2/kitchen_2-3_11zon.webp",
+      "discount": null,
+      "price": 385000,
+      "news": "Рассрочка уже доступна",
+      "sale": true
+    },
+    {
+      "id": 12,
+      "src": "/images/kitchens/kitchen_3/kitchen_3-2_11zon.webp",
+      "discount": 5,
+      "price": 385000,
+      "news": "Рассрочка 0-0-12",
+      "sale": false
+    }
+  ]
+]

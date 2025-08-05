@@ -1,0 +1,78 @@
+@use "reset";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-size-xs: 12px;
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 18px;
+  --font-size-xl: 22px;
+  --font-size-xxl: 26px;
+  --font-size-xxxl: 35px;
+
+  --font-weigth-s: 400;
+  --font-weigth-m: 600;
+  --font-weigth-l: 800;
+
+  --header-height-desktop: 70px;
+  --header-height-mobile: 40px;
+
+  --padding-xs: 5px;
+  --padding-s: 10px;
+  --padding-m: 15px;
+  --padding-l: 20px;
+  --padding-xl: 30px;
+  --padding-xxl: 40px;
+
+  --margin-xs: 5px;
+  --margin-s: 10px;
+  --margin-m: 15px;
+  --margin-l: 20px;
+  --margin-xl: 30px;
+  --margin-xxl: 40px;
+
+  --gap-xs: 5px;
+  --gap-s: 10px;
+  --gap-m: 15px;
+  --gap-l: 20px;
+  --gap-xl: 30px;
+  --gap-xxl: 40px;
+  --gap-xxxl: 60px;
+
+  --accent: #a18a68;
+  --white: #ffffff;
+  --white-dark: #f9f9f9;
+  --black: #000000;
+  --dark-gray: #707070;
+  --gray: #d8d8d8;
+  --light-gray: #efefef;
+  --errors-light: #d82700;
+  --red: #f12d02;
+  --light-red: #d74221;
+  --middle-gray: rgb(92, 94, 102);
+  --text-color: #333;
+
+  --border-radius-xs: 2px;
+  --border-radius-s: 5px;
+  --border-radius-m: 10px;
+  --border-radius-l: 15px;
+  --border-radius-xl: 20px;
+  --border-radius-xxl: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  max-width: 1280px;
+  margin: auto;
+}

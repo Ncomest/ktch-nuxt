@@ -1,0 +1,53 @@
+.side-panel-burger {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap-l);
+  padding: var(--padding-l) var(--padding-l);
+
+  &__title {
+    font-size: var(--font-size-xl);
+    position: relative;
+    color: rgb(66, 66, 66);
+
+    @media (max-width: 425px) {
+      font-size: var(--font-size-l);
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      display: inline-block;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: var(--accent);
+    }
+  }
+
+  &__defis {
+    height: 2px;
+    width: 90%;
+    background-color: var(--light-gray);
+  }
+
+  &__menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--gap-xxl);
+    margin-bottom: 30px;
+  }
+
+  &__meta-container {
+    display: flex;
+    align-items: center;
+    column-gap: var(--gap-s);
+  }
+
+  &__link {
+    text-decoration: none;
+    color: rgb(92, 94, 102);
+    font-weight: var(--font-weigth-m);
+  }
+}

@@ -1,0 +1,54 @@
+.the-order {
+  position: relative;
+  display: flex;
+  padding: var(--padding-xl);
+  padding-right: 80px;
+  justify-content: end;
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: var(--padding-l);
+    border-radius: var(--border-radius-s);
+  }
+
+  @media (max-width: 425px) {
+    padding: 0;
+    border-radius: var(--border-radius-s);
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-size: cover;
+    background-image: linear-gradient(
+        95deg,
+        rgba(0, 0, 0, 0.3) 10%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("/images/classic/kitchen_5.webp");
+
+
+    @media (max-width: 425px) {
+      display: none;
+    }
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}

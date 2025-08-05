@@ -1,0 +1,13 @@
+.swiper {
+  &__image-wrapper {
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: (var(--white-dark));
+  border: 1px solid var(--dark-gray);
+}
+
+

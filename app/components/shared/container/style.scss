@@ -1,0 +1,27 @@
+.the-container {
+  padding: var(--padding-xl) var(--padding-s);
+  background-color: var(--white-dark);
+  border-radius: var(--border-radius-s);
+
+  @media (max-width: 425px) {
+    padding: var(--padding-l) 5px;
+  }
+
+  &__title {
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weigth-l);
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: var(--margin-xl);
+    font-family: "Vollkorn", serif;
+
+    @media (max-width: 768px) {
+      font-size: var(--font-size-xxl);
+    }
+
+    @media (max-width: 425px) {
+      font-size: var(--font-size-xl);
+      margin-bottom: var(--margin-l);
+    }
+  }
+}
