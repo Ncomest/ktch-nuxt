@@ -11,6 +11,7 @@
     </div>
     <div class="the-footer__meta">
       <div class="the-footer__meta-content">
+        <header class="the-footer__meta-content__header">Контакты:</header>
         <div class="the-footer__meta-container">
           <span
             ><svg
