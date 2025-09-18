@@ -8,7 +8,7 @@ import TheContainer from "@components/shared/container/TheContainer.vue";
 import TheOrder from "@/components/widget/order/TheOrder.vue";
 </script>
 <template>
-  <main class="the-home">
+  <div class="the-home">
     <main-slider class="the-home__main-slider" />
 
     <the-order />
@@ -29,6 +29,6 @@ import TheOrder from "@/components/widget/order/TheOrder.vue";
     <the-container title="Сделать заявку">
       <kitchen-form />
     </the-container>
-  </main>
+  </div>
 </template>
 <style src="./style.scss"></style>

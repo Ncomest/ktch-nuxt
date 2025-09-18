@@ -8,19 +8,20 @@ import TheBurger from "@components/shared/buttons/burger/TheBurger.vue";
   <div class="the-header">
     <the-logo />
     <nav class="the-header__navbar">
-      <a href="#post-order" class="the-header__button-buy">Получить проект</a>
+      <the-link
+        class="the-header__button-buy"
+        text="Получить проект"
+        href="/#post-order"
+      />
 
       <the-link
         text="Каталог"
-        href="#catalog-kitchen"
+        href="/#catalog-kitchen"
         class="the-header__catalog"
       />
+      <!-- href="#catalog-kitchen" -->
 
-      <TheLink
-        text="Наши дизайнеры"
-        href="#about-us"
-        class="the-header__our-designer"
-      />
+      <the-link text="О нас" href="/about" class="the-header__our-designer" />
     </nav>
     <div class="the-header__number-container">
       <span

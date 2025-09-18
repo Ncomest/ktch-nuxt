@@ -1,0 +1,49 @@
+.app-contact {
+  display: flex;
+  column-gap: 40px;
+
+  &__map-header {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0;
+    color: var(--accent);
+  }
+
+  &__contacts--bold {
+    font-weight: 700;
+    font-style: 18px;
+  }
+
+  &__contacts-header {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--accent);
+  }
+
+  &__contacts-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  &__contacts-block {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    & > p {
+      color: var(--dark-gray);
+      font-weight: 500;
+    }
+  }
+
+  &__contacts-container-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__meta {
+    font-size: 18px;
+  }
+}

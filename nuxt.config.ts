@@ -34,7 +34,7 @@ export default defineNuxtConfig({
           content:
             "Изготовим кухню вашей мечты по индивидуальному проекту! Высокое качество, быстрые сроки.",
         },
-        { property: "og:image", content: "https://grafckie.ru/og-image.jpg" },
+        { property: "og:image", content: "https://grafckie.ru/og-image.webp" },
         { property: "og:url", content: "https://grafckie.ru" },
       ],
       link: [

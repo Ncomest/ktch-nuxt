@@ -1,5 +1,7 @@
-<script setup></script>
+<script setup>
+import { NuxtLink } from "#components";
+</script>
 <template>
-  <a href="#" class="logo">Графские кухни</a>
+  <NuxtLink class="logo" to="/">Графские кухни</NuxtLink>
 </template>
 <style src="./style.scss"></style>

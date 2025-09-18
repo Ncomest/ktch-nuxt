@@ -21,7 +21,11 @@ const sidePanel = useSidePanel();
     </side-panel>
   </transition>
 
-  <NuxtPage />
+  <transition name="fade" mode="out-in">
+    <main :key="$route.fullPath">
+      <NuxtPage />
+    </main>
+  </transition>
 
   <the-footer />
 </template>
@@ -40,6 +44,16 @@ const sidePanel = useSidePanel();
 .slide-enter-to,
 .slide-leave-from {
   transform: translateX(0);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 .app-side-panel {

@@ -2,13 +2,24 @@
 <template>
   <footer class="the-footer">
     <div class="the-footer__nav">
-      <div>
+      <div class="the-footer__image-wrapper">
+        <img
+          class="the-footer__image-wrapper__image"
+          src="/og-image.webp"
+          alt="Наша площадка"
+        />
+        <!-- <p>О компании</p> -->
         <!-- <p>catalog</p>
         <p>catalog</p>
         <p>catalog</p>
         <p>catalog</p> -->
       </div>
     </div>
+
+    <div>
+      <!-- some text -->
+    </div>
+
     <div class="the-footer__meta">
       <div class="the-footer__meta-content">
         <header class="the-footer__meta-content__header">Контакты:</header>
