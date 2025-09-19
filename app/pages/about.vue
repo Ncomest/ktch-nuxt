@@ -16,5 +16,6 @@ import AppContacts from "~/components/section/contacts/AppContacts.vue";
   flex-direction: column;
   row-gap: 40px;
   padding-bottom: 40px;
+  padding: 0 20px;
 }
 </style>

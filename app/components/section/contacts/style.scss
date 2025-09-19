@@ -1,12 +1,22 @@
 .app-contact {
   display: flex;
   column-gap: 40px;
+  padding: 20px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    row-gap: 20px;
+  }
 
   &__map-header {
     font-size: 30px;
     font-weight: 700;
-    margin: 20px 0;
+    margin: 10px 0;
     color: var(--accent);
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   &__contacts--bold {
@@ -19,12 +29,20 @@
     font-weight: 700;
     margin: 10px 0;
     color: var(--accent);
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   &__contacts-container {
     display: flex;
     flex-direction: column;
     row-gap: 50px;
+
+    @media (max-width: 768px) {
+      row-gap: 20px;
+    }
   }
 
   &__contacts-block {
@@ -34,6 +52,10 @@
     & > p {
       color: var(--dark-gray);
       font-weight: 500;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -45,5 +67,19 @@
 
   &__meta {
     font-size: 18px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  &__iframe-map {
+    width: 350px;
+    height: 350px;
+
+    @media (max-width: 768px) {
+      width: 345px;
+      height: 250px;
+    }
   }
 }

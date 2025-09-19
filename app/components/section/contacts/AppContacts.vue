@@ -27,6 +27,7 @@ import TheLink from "~/components/shared/link/the-link/TheLink.vue";
             frameborder="1"
             allowfullscreen="true"
             style="position: relative"
+            class="app-contact__iframe-map"
           ></iframe>
         </div>
       </div>
@@ -39,7 +40,7 @@ import TheLink from "~/components/shared/link/the-link/TheLink.vue";
           <p>
             Мы работаем
             <span class="app-contact__contacts--bold">ежедневно</span> с 10:00 -
-            20:00ч без выходных
+            20:00 без выходных
           </p>
         </div>
 

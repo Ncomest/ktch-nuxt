@@ -9,19 +9,19 @@ const sidePanel = useSidePanel();
     <div class="side-panel-burger__menu-container">
       <TheLink
         text="Заказать кухню"
-        href="#post-order"
+        href="/#post-order"
         class="side-panel-burger__title"
         @click="sidePanel.close()"
       />
       <TheLink
         text="Каталог кухонь"
-        href="#catalog-kitchen"
+        href="/#catalog-kitchen"
         class="side-panel-burger__title"
         @click="sidePanel.close()"
       />
       <TheLink
-        text="Наши дизайнеры"
-        href="#about-us"
+        text="О нас"
+        href="/about"
         class="side-panel-burger__title"
         @click="sidePanel.close()"
       />
