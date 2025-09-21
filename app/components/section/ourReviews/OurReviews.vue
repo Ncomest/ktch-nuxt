@@ -1,8 +1,10 @@
 <script setup>
-import TheReview from "@components/shared/review/TheReview.vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Autoplay, Navigation } from "swiper/modules";
+import TheReview from "@components/shared/review/TheReview.vue";
 
 const reviews = [
   {
@@ -117,7 +119,7 @@ const reviews = [
   },
   {
     name: "Виктория Ознобкина",
-    avatar: "/images/avatars/oznobkinaV.jpg",
+    avatar: "/images/avatars/oznobkinaV.webp",
     image: "",
     id: 11,
     price: 546800,
@@ -139,7 +141,7 @@ const reviews = [
   },
   {
     name: "Екатерина Халеева",
-    avatar: "/images/avatars/haleevaE.jpg",
+    avatar: "/images/avatars/haleevaE.webp",
     image: "",
     id: 13,
     price: 341800,
@@ -151,7 +153,7 @@ const reviews = [
   },
   {
     name: "Алина Шумкина",
-    avatar: "/images/avatars/shumkinaA.jpg",
+    avatar: "/images/avatars/shumkinaA.webp",
     image: "",
     id: 14,
     price: 445200,
@@ -162,8 +164,8 @@ const reviews = [
   },
   {
     name: "Мария Чепрасова",
-    avatar: "/images/avatars/cherepasova.jpg",
-    image: "/images/reviews/mariaCh_1.jpg",
+    avatar: "/images/avatars/cherepasova.webp",
+    image: "/images/reviews/mariaCh_1.webp",
     id: 15,
     price: 435600,
     review:
@@ -175,7 +177,7 @@ const reviews = [
   {
     name: "Илона Шенгелия",
     avatar: "",
-    image: "/images/reviews/ilonaSh_1.jpg",
+    image: "/images/reviews/ilonaSh_1.webp",
     id: 16,
     price: 561400,
     review:
@@ -186,7 +188,7 @@ const reviews = [
   },
   {
     name: "Наталья Д.",
-    avatar: "/images/avatars/nataliaD.jpg",
+    avatar: "/images/avatars/nataliaD.webp",
     image: "",
     id: 17,
     price: 313000,
@@ -213,7 +215,7 @@ const reviews = [
   {
     name: "Карина Кирнос",
     avatar: "",
-    image: "/images/reviews/karinaK_1.jpg",
+    image: "/images/reviews/karinaK_1.webp",
     id: 19,
     price: 662000,
     review:
@@ -224,8 +226,8 @@ const reviews = [
   },
   {
     name: "Светлана Лихачева",
-    avatar: "/images/avatars/lihachovaS.jpg",
-    image: "/images/reviews/svetalanaL_1.jpg",
+    avatar: "/images/avatars/lihachovaS.webp",
+    image: "/images/reviews/svetalanaL_1.webp",
     id: 20,
     price: 614000,
     review:
@@ -234,15 +236,33 @@ const reviews = [
     date: "29 мая 2023",
   },
 ];
-
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Navigation } from "swiper/modules";
 </script>
+
 <template>
   <section class="our-reviews">
     <div class="our-reviews__total-review">
       Всего отзывов: <span>{{ reviews.length }}</span>
     </div>
+
+    <ClientOnly>
+      <Teleport to="body">
+        <div
+          style="
+            background-color: aqua;
+            width: 300px;
+            height: 300px;
+            z-index: 150;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          "
+        >
+          teleport
+        </div>
+      </Teleport>
+    </ClientOnly>
+
     <div class="our-reviews__swiper-wrapper">
       <Swiper
         class="our-reviews__swiper"

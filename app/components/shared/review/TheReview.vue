@@ -1,7 +1,7 @@
 <script setup>
 import ImageWrapper from "@components/shared/image-wrapper/ImageWrapper.vue";
-import noimage from "/images/reviews/noimage.jpg"
-import noavatar from "/images/avatars/nophoto.jpg"
+import noimage from "/images/reviews/noimage.webp"
+import noavatar from "/images/avatars/nophoto.webp"
 
 import AppRate from "@components/shared/rate/AppRate.vue";
 

@@ -4,10 +4,10 @@ import AppContacts from "~/components/section/contacts/AppContacts.vue";
 </script>
 
 <template>
-  <div class="app-about">
+  <main class="app-about">
     <about-us />
     <app-contacts />
-  </div>
+  </main>
 </template>
 
 <style scoped lang="scss">

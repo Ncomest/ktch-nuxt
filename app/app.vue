@@ -11,6 +11,9 @@ const sidePanel = useSidePanel();
 
 <template>
   <the-header />
+  <h1 class="visually-hidden">
+    Купить кухни в Воронеже | Графские кухни | Заказать кухню | Ремонт кухонь
+  </h1>
 
   <transition name="slide">
     <side-panel
@@ -21,16 +24,12 @@ const sidePanel = useSidePanel();
     </side-panel>
   </transition>
 
-  <transition name="fade" mode="out-in">
-    <main :key="$route.fullPath">
-      <NuxtPage />
-    </main>
-  </transition>
+  <NuxtPage :transition="{ name: 'fade', mode: 'out-in' }" />
 
   <the-footer />
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .slide-enter-active,
 .slide-leave-active {
   transition: transform 0.3s ease;

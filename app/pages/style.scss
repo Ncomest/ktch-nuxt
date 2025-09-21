@@ -6,7 +6,7 @@
   row-gap: var(--gap-xxl);
 
   @media (max-width: 425px) {
-    padding: var(--padding-s) ;
+    padding: var(--padding-s);
     row-gap: var(--gap-l);
   }
 
@@ -16,3 +16,4 @@
     width: 100%;
   }
 }
+

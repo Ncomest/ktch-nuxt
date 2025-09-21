@@ -6,9 +6,11 @@ import CatalogKitchen from "@components/shared/grid/catalog-kitchen/CatalogKitch
 import KitchenForm from "@components/widget/forms/kitchen-form/KitchenForm.vue";
 import TheContainer from "@components/shared/container/TheContainer.vue";
 import TheOrder from "@/components/widget/order/TheOrder.vue";
+
 </script>
+
 <template>
-  <div class="the-home">
+  <main class="the-home">
     <main-slider class="the-home__main-slider" />
 
     <the-order />
@@ -20,15 +22,14 @@ import TheOrder from "@/components/widget/order/TheOrder.vue";
     <the-container title="Наши дизайнеры">
       <our-designer />
     </the-container>
-    
+
     <the-container title="Отзывы">
       <our-reviews />
     </the-container>
 
-
     <the-container title="Сделать заявку">
       <kitchen-form />
     </the-container>
-  </div>
+  </main>
 </template>
 <style src="./style.scss"></style>
