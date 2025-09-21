@@ -5,6 +5,7 @@ import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Navigation } from "swiper/modules";
 import TheReview from "@components/shared/review/TheReview.vue";
+import ModalReview from "~/components/entities/modal/ModalReview.vue";
 
 const reviews = [
   {
@@ -236,6 +237,23 @@ const reviews = [
     date: "29 мая 2023",
   },
 ];
+
+const modalStore = useModalStore();
+
+const handleOpenModal = () => {
+  modalStore.toggle();
+};
+
+watch(
+  () => modalStore.isModalOpen,
+  (isOpen) => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }
+);
 </script>
 
 <template>
@@ -246,20 +264,7 @@ const reviews = [
 
     <ClientOnly>
       <Teleport to="body">
-        <div
-          style="
-            background-color: aqua;
-            width: 300px;
-            height: 300px;
-            z-index: 150;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          "
-        >
-          teleport
-        </div>
+        <ModalReview v-if="modalStore.isModalOpen" />
       </Teleport>
     </ClientOnly>
 
@@ -291,7 +296,7 @@ const reviews = [
         }"
       >
         <SwiperSlide v-for="review in reviews" :key="review.id">
-          <TheReview :item="review" />
+          <TheReview :item="review" @click="handleOpenModal" />
         </SwiperSlide>
         <template #container-end>
           <div class="swiper-button-prev"></div>
