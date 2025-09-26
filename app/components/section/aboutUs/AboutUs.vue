@@ -4,7 +4,7 @@
 
 <template>
   <section class="about-us">
-    <h2 class="about-us__header">О компании</h2>
+    <h1 class="about-us__header">О компании «Графские кухни»</h1>
     <div>
       <p class="about-us__content">
         "Компания «Графская кухня» основана в 1924 году в Воронежской области.
