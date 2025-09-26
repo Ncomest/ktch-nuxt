@@ -20,6 +20,12 @@ const sidePanel = useSidePanel();
         @click="sidePanel.close()"
       />
       <TheLink
+        text="Отзывы"
+        href="/reviews"
+        class="side-panel-burger__title"
+        @click="sidePanel.close()"
+      />
+      <TheLink
         text="О нас"
         href="/about"
         class="side-panel-burger__title"
