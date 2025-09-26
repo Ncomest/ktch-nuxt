@@ -1,13 +1,5 @@
 <script setup>
-// const isShowMore = ref(false);
 
-// const text = ref();
-// const textMaxLength = ref(0);
-// const lineHeightText = ref(20);
-
-// const contentLength = computed(() => {
-//   return text.value.length;
-// });
 </script>
 
 <template>

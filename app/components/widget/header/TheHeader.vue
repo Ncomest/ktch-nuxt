@@ -19,7 +19,6 @@ import TheBurger from "@components/shared/buttons/burger/TheBurger.vue";
         href="/#catalog-kitchen"
         class="the-header__catalog"
       />
-      <!-- href="#catalog-kitchen" -->
 
       <the-link text="О нас" href="/about" class="the-header__our-designer" />
     </nav>

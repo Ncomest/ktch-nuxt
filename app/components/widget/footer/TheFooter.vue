@@ -8,16 +8,7 @@
           src="/og-image.webp"
           alt="Наша площадка"
         />
-        <!-- <p>О компании</p> -->
-        <!-- <p>catalog</p>
-        <p>catalog</p>
-        <p>catalog</p>
-        <p>catalog</p> -->
       </div>
-    </div>
-
-    <div>
-      <!-- some text -->
     </div>
 
     <div class="the-footer__meta">

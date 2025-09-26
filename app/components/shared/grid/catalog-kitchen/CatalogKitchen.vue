@@ -44,7 +44,7 @@ const kitchens = kitchensData;
             </span>
             <ImageWrapper
               :src="item.src"
-              alt="name"
+              alt="кухни на заказ в Воронеже от компании Графские кухни"
               :key="item.id"
               class="catalog-kitchen__grid-image"
             />
