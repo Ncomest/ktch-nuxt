@@ -21,6 +21,13 @@ import TheBurger from "@components/shared/buttons/burger/TheBurger.vue";
       />
 
       <the-link text="О нас" href="/about" class="the-header__our-designer" />
+
+      <the-link
+        text="Отзывы"
+        href="/reviews"
+        class="the-header__catalog"
+      />
+
     </nav>
     <div class="the-header__number-container">
       <span

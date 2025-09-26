@@ -11,9 +11,11 @@ import TheOrder from "@/components/widget/order/TheOrder.vue";
 
 <template>
   <main class="the-home">
+    <h1 class="visually-hidden">Графские кухни в Воронеже</h1>
+
     <main-slider class="the-home__main-slider" />
 
-    <the-order />
+    <the-order :overlay="true"/>
 
     <the-container title="Каталог кухонь">
       <catalog-kitchen />

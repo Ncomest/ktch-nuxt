@@ -1,6 +1,7 @@
-<script setup></script>
+<script setup>
+</script>
 <template>
-    <a href="#post-order" class="button-order__button">
+    <a href="/#post-order" class="button-order__button">
       Заказать проект
       <svg fill="currentColor" viewBox="0 0 24 24" class="button-order__icon">
         <path

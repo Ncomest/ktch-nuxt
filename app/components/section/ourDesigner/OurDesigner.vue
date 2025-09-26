@@ -1,7 +1,7 @@
 <script></script>
 <template>
   <section class="our-designer">
-    <h2 class="our-designer__hidden-anchor" id="about-us"></h2>
+    <p class="our-designer__hidden-anchor" id="about-us"></p>
     <div class="our-designer__card designer-card">
       <div class="designer-card__photo">
         <img src="/designer/designer_2_11zon.webp" alt="Кристина Палютина дизайнер кухонь в Воронеже 'Графские кухни'" />

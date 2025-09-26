@@ -149,7 +149,7 @@ const reviews = [
   },
   {
     name: "Мария Чепрасова",
-    image: "/images/reviews/mariaCh_1.jpg",
+    image: "/images/reviews/mariaCh_1.webp",
     alt: "Петр и Кристина лучше дизайнеры в Воронеже",
     id: 15,
     price: 314400,
@@ -161,7 +161,7 @@ const reviews = [
   },
   {
     name: "Илона Шенгелия",
-    image: "/images/reviews/ilonaSh_1.jpg",
+    image: "/images/reviews/ilonaSh_1.webp",
     alt: "Графские кухни широкий выбор кухонь",
     id: 16,
     price: 314400,
@@ -198,7 +198,7 @@ const reviews = [
   },
   {
     name: "Карина Кирнос",
-    image: "/images/reviews/karinaK_1.jpg",
+    image: "/images/reviews/karinaK_1.webp",
     alt: "Графские кухни большой выбор",
     id: 19,
     price: 314400,
@@ -210,7 +210,7 @@ const reviews = [
   },
   {
     name: "Светлана Лихачева",
-    image: "/images/reviews/svetalanaL_1.jpg",
+    image: "/images/reviews/svetalanaL_1.webp",
     alt: "Графские кухни индивидуальный подход",
     id: 20,
     price: 314400,

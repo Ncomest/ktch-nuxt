@@ -94,6 +94,6 @@ definePageMeta({
   display: flex;
   flex-direction: column;
   row-gap: 40px;
-  padding-bottom: 40px;
+  padding: 0 10px;
 }
 </style>

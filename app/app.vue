@@ -11,9 +11,6 @@ const sidePanel = useSidePanel();
 
 <template>
   <the-header />
-  <h1 class="visually-hidden">
-    Купить кухни в Воронеже | Графские кухни | Заказать кухню | Ремонт кухонь
-  </h1>
 
   <transition name="slide">
     <side-panel
