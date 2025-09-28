@@ -60,5 +60,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/robots", "@nuxtjs/sitemap", "@pinia/nuxt"],
+  modules: ["@nuxtjs/robots", "@pinia/nuxt"],
 });
