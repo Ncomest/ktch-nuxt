@@ -16,7 +16,7 @@ import TheBurger from "@components/shared/buttons/burger/TheBurger.vue";
 
       <the-link
         text="Каталог"
-        href="/#catalog-kitchen"
+        href="/catalog"
         class="the-header__catalog"
       />
 

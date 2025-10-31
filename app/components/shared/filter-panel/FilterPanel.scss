@@ -1,0 +1,107 @@
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-l);
+  padding: var(--padding-xl);
+  background: var(--white);
+  border-radius: var(--border-radius-m);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--margin-l);
+
+  &__search {
+    width: 100%;
+  }
+
+  &__search-input {
+    width: 100%;
+    padding: var(--padding-m);
+    border: 1px solid var(--gray);
+    border-radius: var(--border-radius-s);
+    font-size: var(--font-size-m);
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    &::placeholder {
+      color: var(--dark-gray);
+    }
+  }
+
+  &__filters {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-l);
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: var(--gap-xl);
+    }
+  }
+
+  &__filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+    flex: 1;
+  }
+
+  &__label {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weigth-m);
+    color: var(--text-color);
+  }
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-s);
+  }
+
+  &__option {
+    padding: var(--padding-s) var(--padding-l);
+    border: 1px solid var(--gray);
+    border-radius: var(--border-radius-s);
+    background: var(--white);
+    color: var(--text-color);
+    font-size: var(--font-size-s);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: var(--accent);
+      background: var(--light-gray);
+    }
+
+    &--active {
+      background: var(--accent);
+      color: var(--white);
+      border-color: var(--accent);
+    }
+  }
+
+  &__reset {
+    align-self: flex-end;
+    padding: var(--padding-m) var(--padding-xl);
+    border: 1px solid var(--gray);
+    border-radius: var(--border-radius-s);
+    background: var(--white);
+    color: var(--text-color);
+    font-size: var(--font-size-m);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover:not(:disabled) {
+      background: var(--light-gray);
+      border-color: var(--accent);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+

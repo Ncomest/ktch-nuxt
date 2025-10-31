@@ -1,104 +1,318 @@
 [
-  [
-    {
-      "id": 1,
-      "src": "/images/kitchens/kitchen_1_11zon.webp",
-      "discount": 10,
-      "news": "акция действует до 31 августа",
-      "price": 345000,
-      "sale": false
-    },
-    {
-      "id": 2,
-      "src": "/images/kitchens/kitchen_2_11zon.webp",
-      "discount": null,
-      "price": 280000,
-      "news": "Распродажа с выставки -50%",
-      "sale": true
-    },
-    {
-      "id": 3,
-      "src": "/images/kitchens/kitchen_3_11zon.webp",
-      "discount": 40,
-      "price": 385000,
-      "news": "Хит продаж -40%",
-      "sale": false
-    },
-    {
-      "id": 4,
-      "src": "/images/kitchens/kitchen_4_11zon.webp",
-      "discount": 20,
-      "price": 470000,
-      "news": "Сроки изготовления 20 дней",
-      "sale": false
-    }
-  ],
-  [
-    {
-      "id": 5,
-      "src": "/images/kitchens/kitchen_5_11zon.webp",
-      "discount": null,
-      "price": 550000,
-      "news": "Долгий срок службы",
-      "sale": true
-    },
-    {
-      "id": 6,
-      "src": "/images/kitchens/kitchen_6_11zon.webp",
-      "discount": null,
-      "price": 440000,
-      "news": "Попробуй новый стиль",
-      "sale": true
-    },
-    {
-      "id": 7,
-      "src": "/images/kitchens/kitchen_7_11zon.webp",
-      "discount": 25,
-      "price": 490000,
-      "news": "Распродажа",
-      "sale": false
-    },
-    {
-      "id": 8,
-      "src": "/images/kitchens/kitchen_8_11zon.webp",
-      "discount": 15,
-      "price": 610000,
-      "news": "акция действует до 31 сентября",
-      "sale": false
-    }
-  ],
-  [
-    {
-      "id": 9,
-      "src": "/images/kitchens/kitchen_9_11zon.webp",
-      "discount": 10,
-      "price": 290000,
-      "news": "акция действует до 31 сентября",
-      "sale": false
-    },
-    {
-      "id": 10,
-      "src": "/images/kitchens/kitchen_1/kitchen_1-2_11zon.webp",
-      "discount": 35,
-      "price": 435000,
-      "news": "Супер предложение",
-      "sale": false
-    },
-    {
-      "id": 11,
-      "src": "/images/kitchens/kitchen_2/kitchen_2-3_11zon.webp",
-      "discount": null,
-      "price": 385000,
-      "news": "Рассрочка уже доступна",
-      "sale": true
-    },
-    {
-      "id": 12,
-      "src": "/images/kitchens/kitchen_3/kitchen_3-2_11zon.webp",
-      "discount": 5,
-      "price": 385000,
-      "news": "Рассрочка 0-0-12",
-      "sale": false
-    }
-  ]
+  {
+    "id": 1,
+    "name": "София",
+    "type": "прямая",
+    "material": "МДФ",
+    "price": 345000,
+    "discountPrice": 310500,
+    "image": "/images/kitchens/kitchen_1_11zon.webp",
+    "description": "Элегантная прямая кухня в классическом стиле. Идеально подходит для просторных помещений и создает атмосферу уюта и комфорта.",
+    "badge": "скидка"
+  },
+  {
+    "id": 2,
+    "name": "Милан",
+    "type": "угловая",
+    "material": "ДСП",
+    "price": 280000,
+    "image": "/images/kitchens/kitchen_2_11zon.webp",
+    "description": "Современная угловая кухня с продуманной эргономикой. Максимально использует пространство и обеспечивает удобство приготовления.",
+    "badge": "распродажа"
+  },
+  {
+    "id": 3,
+    "name": "Гамма",
+    "type": "п-образная",
+    "material": "Массив дерева",
+    "price": 385000,
+    "discountPrice": 231000,
+    "image": "/images/kitchens/kitchen_3_11zon.webp",
+    "description": "Роскошная п-образная кухня из массива дерева. Премиальное качество и неповторимый дизайн для ценителей натуральных материалов.",
+    "badge": "скидка"
+  },
+  {
+    "id": 4,
+    "name": "Норд",
+    "type": "прямая",
+    "material": "МДФ",
+    "price": 470000,
+    "discountPrice": 376000,
+    "image": "/images/kitchens/kitchen_4_11zon.webp",
+    "description": "Минималистичная прямая кухня в скандинавском стиле. Светлые тона и лаконичный дизайн создают ощущение простора.",
+    "badge": "новинка"
+  },
+  {
+    "id": 5,
+    "name": "Эстетика",
+    "type": "угловая",
+    "material": "ДСП",
+    "price": 550000,
+    "image": "/images/kitchens/kitchen_5_11zon.webp",
+    "description": "Стильная угловая кухня с продуманной системой хранения. Сочетает функциональность и эстетическую привлекательность.",
+    "badge": "распродажа"
+  },
+  {
+    "id": 6,
+    "name": "Верона",
+    "type": "прямая",
+    "material": "Массив дерева",
+    "price": 440000,
+    "image": "/images/kitchens/kitchen_6_11zon.webp",
+    "description": "Классическая прямая кухня с изысканными деталями. Идеальный выбор для любителей традиционного дизайна и качества.",
+    "badge": "новинка"
+  },
+  {
+    "id": 7,
+    "name": "Альфа",
+    "type": "п-образная",
+    "material": "МДФ",
+    "price": 490000,
+    "discountPrice": 367500,
+    "image": "/images/kitchens/kitchen_7_11zon.webp",
+    "description": "Просторная п-образная кухня с увеличенной рабочей зоной. Отлично подходит для больших семей и любителей готовить.",
+    "badge": "скидка"
+  },
+  {
+    "id": 8,
+    "name": "Бета",
+    "type": "угловая",
+    "material": "ДСП",
+    "price": 610000,
+    "discountPrice": 518500,
+    "image": "/images/kitchens/kitchen_8_11zon.webp",
+    "description": "Современная угловая кухня с модульной системой. Гибкая конфигурация позволяет создать уникальное пространство.",
+    "badge": "скидка"
+  },
+  {
+    "id": 9,
+    "name": "Вега",
+    "type": "прямая",
+    "material": "МДФ",
+    "price": 290000,
+    "discountPrice": 261000,
+    "image": "/images/kitchens/kitchen_9_11zon.webp",
+    "description": "Компактная прямая кухня для небольших помещений. Оптимальное соотношение цены и качества, отличный вариант для студий.",
+    "badge": "новинка"
+  },
+  {
+    "id": 10,
+    "name": "Дельта",
+    "type": "угловая",
+    "material": "Массив дерева",
+    "price": 435000,
+    "discountPrice": 282750,
+    "image": "/images/kitchens/kitchen_1/kitchen_1-2_11zon.webp",
+    "description": "Премиальная угловая кухня из натурального дерева. Эксклюзивный дизайн и долговечность материалов гарантируют многолетнее использование.",
+    "badge": "скидка"
+  },
+  {
+    "id": 11,
+    "name": "Омега",
+    "type": "п-образная",
+    "material": "ДСП",
+    "price": 385000,
+    "image": "/images/kitchens/kitchen_2/kitchen_2-3_11zon.webp",
+    "description": "Функциональная п-образная кухня с максимальной площадью для готовки. Идеальна для тех, кто ценит комфорт и удобство.",
+    "badge": "распродажа"
+  },
+  {
+    "id": 12,
+    "name": "Сириус",
+    "type": "прямая",
+    "material": "МДФ",
+    "price": 385000,
+    "discountPrice": 365750,
+    "image": "/images/kitchens/kitchen_3/kitchen_3-2_11zon.webp",
+    "description": "Элегантная прямая кухня с современными технологиями хранения. Продуманная эргономика делает процесс готовки приятным.",
+    "badge": "скидка"
+  },
+  {
+    "id": 13,
+    "name": "Ариэль",
+    "type": "угловая",
+    "material": "ДСП",
+    "price": 320000,
+    "image": "/images/kitchens/kitchen_1_11zon.webp",
+    "description": "Стильная угловая кухня в современном дизайне. Отличное решение для оптимизации пространства и создания уютной атмосферы.",
+    "badge": "новинка"
+  },
+  {
+    "id": 14,
+    "name": "Луна",
+    "type": "прямая",
+    "material": "Массив дерева",
+    "price": 520000,
+    "discountPrice": 416000,
+    "image": "/images/kitchens/kitchen_2_11zon.webp",
+    "description": "Роскошная прямая кухня из массива дерева. Натуральные материалы и ручная обработка создают уникальный интерьер.",
+    "badge": "скидка"
+  },
+  {
+    "id": 15,
+    "name": "Солнце",
+    "type": "п-образная",
+    "material": "МДФ",
+    "price": 450000,
+    "image": "/images/kitchens/kitchen_3_11zon.webp",
+    "description": "Светлая п-образная кухня с просторной рабочей зоной. Идеально подходит для создания семейного центра дома.",
+    "badge": "новинка"
+  },
+  {
+    "id": 16,
+    "name": "Марс",
+    "type": "угловая",
+    "material": "ДСП",
+    "price": 370000,
+    "discountPrice": 333000,
+    "image": "/images/kitchens/kitchen_4_11zon.webp",
+    "description": "Динамичная угловая кухня в современном стиле. Яркий дизайн и функциональность делают ее центром притяжения.",
+    "badge": "скидка"
+  },
+  {
+    "id": 17,
+    "name": "Юпитер",
+    "type": "прямая",
+    "material": "МДФ",
+    "price": 410000,
+    "image": "/images/kitchens/kitchen_5_11zon.webp",
+    "description": "Величественная прямая кухня с массивными формами. Впечатляющий дизайн для просторных помещений.",
+    "badge": "распродажа"
+  },
+  {
+    "id": 18,
+    "name": "Сатурн",
+    "type": "п-образная",
+    "material": "Массив дерева",
+    "price": 580000,
+    "discountPrice": 464000,
+    "image": "/images/kitchens/kitchen_6_11zon.webp",
+    "description": "Эксклюзивная п-образная кухня из ценных пород дерева. Премиальное качество для взыскательных клиентов.",
+    "badge": "скидка"
+  },
+  {
+    "id": 19,
+    "name": "Нептун",
+    "type": "угловая",
+    "material": "ДСП",
+    "price": 340000,
+    "image": "/images/kitchens/kitchen_7_11zon.webp",
+    "description": "Уютная угловая кухня в морском стиле. Светлые тона и натуральные акценты создают расслабляющую атмосферу.",
+    "badge": "новинка"
+  },
+  {
+    "id": 20,
+    "name": "Плутон",
+    "type": "прямая",
+    "material": "МДФ",
+    "price": 360000,
+    "discountPrice": 306000,
+    "image": "/images/kitchens/kitchen_8_11zon.webp",
+    "description": "Компактная прямая кухня с оптимальной функциональностью. Идеальна для небольших пространств без потери комфорта.",
+    "badge": "скидка"
+  },
+  {
+    "id": 21,
+    "name": "Меркурий",
+    "type": "угловая",
+    "material": "ДСП",
+    "price": 295000,
+    "image": "/images/kitchens/kitchen_9_11zon.webp",
+    "description": "Быстрая и маневренная угловая кухня для активных хозяек. Продуманная эргономика ускоряет процесс готовки.",
+    "badge": "распродажа"
+  },
+  {
+    "id": 22,
+    "name": "Венера",
+    "type": "п-образная",
+    "material": "Массив дерева",
+    "price": 620000,
+    "image": "/images/kitchens/kitchen_1/kitchen_1-2_11zon.webp",
+    "description": "Изящная п-образная кухня с женственными линиями. Элегантный дизайн для создания уютного пространства.",
+    "badge": "новинка"
+  },
+  {
+    "id": 23,
+    "name": "Уран",
+    "type": "прямая",
+    "material": "МДФ",
+    "price": 400000,
+    "discountPrice": 320000,
+    "image": "/images/kitchens/kitchen_2/kitchen_2-3_11zon.webp",
+    "description": "Необычная прямая кухня с оригинальным дизайном. Уникальные решения для индивидуального интерьера.",
+    "badge": "скидка"
+  },
+  {
+    "id": 24,
+    "name": "Кронос",
+    "type": "угловая",
+    "material": "ДСП",
+    "price": 330000,
+    "image": "/images/kitchens/kitchen_3/kitchen_3-2_11zon.webp",
+    "description": "Классическая угловая кухня с традиционными элементами. Вневременной дизайн для семейных ценностей.",
+    "badge": "распродажа"
+  },
+  {
+    "id": 25,
+    "name": "Зевс",
+    "type": "п-образная",
+    "material": "Массив дерева",
+    "price": 650000,
+    "discountPrice": 455000,
+    "image": "/images/kitchens/kitchen_1_11zon.webp",
+    "description": "Величественная п-образная кухня из ценных пород дерева. Импозантный дизайн для просторных интерьеров.",
+    "badge": "скидка"
+  },
+  {
+    "id": 26,
+    "name": "Афина",
+    "type": "прямая",
+    "material": "МДФ",
+    "price": 380000,
+    "image": "/images/kitchens/kitchen_2_11zon.webp",
+    "description": "Мудрая прямая кухня с продуманной организацией пространства. Функциональность и красота в гармонии.",
+    "badge": "новинка"
+  },
+  {
+    "id": 27,
+    "name": "Аполлон",
+    "type": "угловая",
+    "material": "ДСП",
+    "price": 350000,
+    "discountPrice": 297500,
+    "image": "/images/kitchens/kitchen_3_11zon.webp",
+    "description": "Светлая угловая кухня с солнечным настроением. Яркий дизайн создает позитивную атмосферу для готовки.",
+    "badge": "скидка"
+  },
+  {
+    "id": 28,
+    "name": "Артемида",
+    "type": "п-образная",
+    "material": "МДФ",
+    "price": 480000,
+    "image": "/images/kitchens/kitchen_4_11zon.webp",
+    "description": "Изящная п-образная кухня с природными мотивами. Естественные материалы и плавные линии интерьера.",
+    "badge": "новинка"
+  },
+  {
+    "id": 29,
+    "name": "Гера",
+    "type": "прямая",
+    "material": "Массив дерева",
+    "price": 570000,
+    "discountPrice": 456000,
+    "image": "/images/kitchens/kitchen_5_11zon.webp",
+    "description": "Царственная прямая кухня из массива дерева. Премиальное качество и роскошный дизайн для статусных интерьеров.",
+    "badge": "скидка"
+  },
+  {
+    "id": 30,
+    "name": "Посейдон",
+    "type": "угловая",
+    "material": "ДСП",
+    "price": 310000,
+    "image": "/images/kitchens/kitchen_6_11zon.webp",
+    "description": "Свежая угловая кухня в морском стиле. Голубые акценты и натуральные материалы напоминают о морском бризе.",
+    "badge": "распродажа"
+  }
 ]

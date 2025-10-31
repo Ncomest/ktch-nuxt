@@ -1,0 +1,132 @@
+.skeleton-loader {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-l);
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: var(--border-radius-m);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(
+      90deg,
+      var(--light-gray) 0%,
+      var(--gray) 50%,
+      var(--light-gray) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+    padding: var(--padding-l);
+  }
+
+  &__title {
+    height: 24px;
+    width: 60%;
+    background: linear-gradient(
+      90deg,
+      var(--light-gray) 0%,
+      var(--gray) 50%,
+      var(--light-gray) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: var(--border-radius-xs);
+  }
+
+  &__meta {
+    display: flex;
+    gap: var(--gap-s);
+  }
+
+  &__meta-item {
+    height: 20px;
+    width: 80px;
+    background: linear-gradient(
+      90deg,
+      var(--light-gray) 0%,
+      var(--gray) 50%,
+      var(--light-gray) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: var(--border-radius-xs);
+  }
+
+  &__description {
+    height: 16px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      var(--light-gray) 0%,
+      var(--gray) 50%,
+      var(--light-gray) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: var(--border-radius-xs);
+
+    &--short {
+      width: 70%;
+    }
+  }
+
+  &__price {
+    height: 28px;
+    width: 120px;
+    background: linear-gradient(
+      90deg,
+      var(--light-gray) 0%,
+      var(--gray) 50%,
+      var(--light-gray) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: var(--border-radius-xs);
+  }
+
+  &__button {
+    height: 40px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      var(--light-gray) 0%,
+      var(--gray) 50%,
+      var(--light-gray) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: var(--border-radius-s);
+    margin-top: var(--margin-s);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
