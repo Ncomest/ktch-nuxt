@@ -1,34 +1,62 @@
 <script setup>
+import { ref, computed } from "vue";
 import ImageWrapper from "@components/shared/image-wrapper/ImageWrapper.vue";
 import noimage from "/images/reviews/noimage.webp";
 import noavatar from "/images/avatars/nophoto.webp";
-
 import AppRate from "@components/shared/rate/AppRate.vue";
 
-defineProps({
+const props = defineProps({
   item: { type: Object, required: true },
 });
 
+const isExpanded = ref(false);
+const maxLength = 150; // лимит символов до кнопки "Развернуть"
 
+const showToggleButton = computed(() => props.item.review.length > maxLength);
 
+const displayedText = computed(() =>
+  isExpanded.value
+    ? props.item.review
+    : props.item.review.slice(0, maxLength) +
+      (showToggleButton.value ? "..." : "")
+);
+
+const toggleReview = () => {
+  isExpanded.value = !isExpanded.value;
+};
 </script>
+
 <template>
   <div class="the-review">
-    <ImageWrapper :src="item.image || noimage" :alt="item.name"/>
+    <ImageWrapper :src="props.item.image || noimage" :alt="props.item.name" />
+
     <div class="the-review__user-container">
-      <image-wrapper
-        :src="item.avatar || noavatar"
-        :alt="item.name"
+      <ImageWrapper
+        :src="props.item.avatar || noavatar"
+        :alt="props.item.name"
         class="the-review__avatar"
       />
-      <h3 class="the-review__name">{{ item.name }}</h3>
+      <h3 class="the-review__name">{{ props.item.name }}</h3>
     </div>
-    <app-rate :value="item.rate" />
-    <p>{{ item.date }}</p>
+
+    <AppRate :value="props.item.rate" />
+    <p>{{ props.item.date }}</p>
+
     <h5 class="the-review__price">
-      Стоимость: {{ item.price.toLocaleString("ru-RU") }}₽
+      Стоимость: {{ props.item.price.toLocaleString("ru-RU") }}₽
     </h5>
-    <p class="the-review__text">{{ item.review }}</p>
+
+    <p class="the-review__text" :class="{ expanded: isExpanded }">
+      {{ displayedText }}
+    </p>
+    <button
+      v-if="showToggleButton"
+      class="the-review__toggle"
+      @click="toggleReview"
+    >
+      {{ isExpanded ? "Свернуть" : "Развернуть" }}
+    </button>
   </div>
 </template>
-<style src="./style.scss"></style>
+
+<style src="./style.scss" lang="scss"></style>

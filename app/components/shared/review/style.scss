@@ -11,7 +11,7 @@
     display: flex;
     column-gap: 20px;
   }
- 
+
   &__name {
     font-size: var(--font-size-l);
     font-weight: var(--font-weigth-m);
@@ -33,9 +33,38 @@
   }
 
   &__text {
-    line-height: 1.1;
+    position: relative;
+    line-height: 1.4;
     font-size: var(--font-size-m);
     color: var(--dark-gray);
     flex: 1;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    // ограничим по умолчанию высоту текста (примерно 4 строки)
+    max-height: 6.5em;
+    // добавляем перенос слов
+    word-wrap: break-word;
+
+    &.expanded {
+      max-height: none; // или очень большое значение
+      overflow: visible;
+    }
+  }
+
+  &__toggle {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 5px;
+    padding: 0;
+    align-self: flex-start;
+    transition: color 0.2s ease;
+
+    &:hover {
+      text-decoration: underline;
+      color: #007bff;
+    }
   }
 }
