@@ -23,7 +23,9 @@
     height: 50px;
     border-radius: 50%;
     border: 1px solid var(--light-gray);
-    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
   }
 
   &__price {

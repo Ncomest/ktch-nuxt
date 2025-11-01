@@ -1,3 +1,4 @@
+import { defineNuxtPlugin } from "#app";
 import VueTheMask from "vue-the-mask";
 
 export default defineNuxtPlugin((nuxtApp) => {

@@ -10,7 +10,7 @@ const props = defineProps({
 });
 
 const isExpanded = ref(false);
-const maxLength = 150; // лимит символов до кнопки "Развернуть"
+const maxLength = 150;
 
 const showToggleButton = computed(() => props.item.review.length > maxLength);
 
@@ -31,7 +31,7 @@ const toggleReview = () => {
     <ImageWrapper :src="props.item.image || noimage" :alt="props.item.name" />
 
     <div class="the-review__user-container">
-      <ImageWrapper
+      <img
         :src="props.item.avatar || noavatar"
         :alt="props.item.name"
         class="the-review__avatar"
