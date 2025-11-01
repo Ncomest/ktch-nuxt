@@ -14,8 +14,8 @@ const sidePanel = useSidePanel();
         @click="sidePanel.close()"
       />
       <TheLink
-        text="Каталог кухонь"
-        href="/#catalog-kitchen"
+        text="Каталог"
+        href="/catalog"
         class="side-panel-burger__title"
         @click="sidePanel.close()"
       />
