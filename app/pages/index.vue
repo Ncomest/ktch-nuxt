@@ -18,7 +18,7 @@ import TheOrder from "@/components/widget/order/TheOrder.vue";
     <the-order :overlay="true"/>
 
     <the-container title="Каталог кухонь">
-      <!-- <catalog-kitchen /> -->
+      <catalog-kitchen />
     </the-container>
 
     <the-container title="Наши дизайнеры">

@@ -6,6 +6,7 @@ import kitchensData from "@/json/kitchens.json";
 import KitchenCard from "~/components/shared/kitchen-card/KitchenCard.vue";
 import Pagination from "~/components/shared/pagination/Pagination.vue";
 import SkeletonLoader from "~/components/shared/skeleton-loader/SkeletonLoader.vue";
+import TheContainer from "~/components/shared/container/TheContainer.vue";
 
 const itemsPerPage = 9;
 const isLoading = ref(false);
@@ -108,51 +109,55 @@ watch([typeFilter, materialFilter, searchQuery], () => {
   <main class="app-catalog">
     <ImageBanner />
 
-    <div class="app-catalog__container">
-      <FilterPanel
-        :types="uniqueTypes"
-        :materials="uniqueMaterials"
-        @update:search="handleSearch"
-        @update:typeFilter="handleTypeFilter"
-        @update:materialFilter="handleMaterialFilter"
-        @reset="resetFilters"
-      />
+    <the-container title="Каталог">
+      <!-- <catalog-kitchen /> -->
 
-      <transition name="fade" mode="out-in">
-        <div v-if="isLoading" key="loading">
-          <SkeletonLoader :count="itemsPerPage" />
-        </div>
-        <div v-else-if="paginatedKitchens.length > 0" key="content">
-          <div>
-            <transition-group
-              name="fade"
-              tag="div"
-              class="app-catalog__catalog-section__grid"
-            >
-              <KitchenCard
-                v-for="kitchen in paginatedKitchens"
-                :key="kitchen.id"
-                :kitchen="kitchen"
-              />
-            </transition-group>
+      <div class="app-catalog__container">
+        <FilterPanel
+          :types="uniqueTypes"
+          :materials="uniqueMaterials"
+          @update:search="handleSearch"
+          @update:typeFilter="handleTypeFilter"
+          @update:materialFilter="handleMaterialFilter"
+          @reset="resetFilters"
+        />
+
+        <transition name="fade" mode="out-in">
+          <div v-if="isLoading" key="loading">
+            <SkeletonLoader :count="itemsPerPage" />
           </div>
+          <div v-else-if="paginatedKitchens.length > 0" key="content">
+            <div>
+              <transition-group
+                name="fade"
+                tag="div"
+                class="app-catalog__catalog-section__grid"
+              >
+                <KitchenCard
+                  v-for="kitchen in paginatedKitchens"
+                  :key="kitchen.id"
+                  :kitchen="kitchen"
+                />
+              </transition-group>
+            </div>
 
-          <Pagination
-            :current-page="currentPage"
-            :total-pages="totalPages"
-            @change-page="changePage"
-          />
-        </div>
-        <div v-else key="empty" class="app-catalog__empty">
-          <p class="app-catalog__empty-text">
-            По вашему запросу ничего не найдено.
-          </p>
-          <button class="app-catalog__empty-button" @click="resetFilters">
-            Сбросить фильтры
-          </button>
-        </div>
-      </transition>
-    </div>
+            <Pagination
+              :current-page="currentPage"
+              :total-pages="totalPages"
+              @change-page="changePage"
+            />
+          </div>
+          <div v-else key="empty" class="app-catalog__empty">
+            <p class="app-catalog__empty-text">
+              По вашему запросу ничего не найдено.
+            </p>
+            <button class="app-catalog__empty-button" @click="resetFilters">
+              Сбросить фильтры
+            </button>
+          </div>
+        </transition>
+      </div>
+    </the-container>
   </main>
 </template>
 

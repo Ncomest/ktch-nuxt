@@ -1,42 +1,43 @@
 <script setup>
-import calcDiscount from '~/helpers/calc-discount';
-import ImageWrapper from '../image-wrapper/ImageWrapper.vue';
+import calcDiscount from "~/helpers/calc-discount";
+import ImageWrapper from "../image-wrapper/ImageWrapper.vue";
 
-defineProps({ kitchen: Object })
+defineProps({ kitchen: Object });
+
+
+const discountPriceUtilite = computed(
+  () =>
+    Math.round(
+      ((kitchen.price - kitchen.discountPrice) / kitchen.price) * 10000
+    ) / 100
+);
 </script>
 
 <template>
-  <article
-    class="product-card"
-    v-for="item in kitchen"
-    :key="item.id"
-  >
-    <span class="product-card__label" v-show="item.discount">
-      -{{ item.discount }}%
-    </span>
+  <article class="product-card">
+    <div v-if="kitchen.discountPrice">
+      <span class="product-card__label" v-show="kitchen.discountPrice">
+        -{{ discountPriceUtilite }}%
+      </span>
+    </div>
 
-    <span class="product-card__label" v-show="item.sale">
-      Распродажа
-    </span>
+    <!-- <span class="product-card__label" v-show="item.sale"> Распродажа </span> -->
 
     <ImageWrapper
       class="product-card__image"
       alt="кухни на заказ в Воронеже от компании Графские кухни"
-      :src="item.src"
-      :key="item.id"
+      :src="kitchen.image"
+      :key="kitchen.id"
     />
 
-    <span class="product-card__news">{{ item.news }}</span>
+    <!-- <span class="product-card__news">{{ kitchen.news }}</span> -->
 
     <div class="product-card__price-container">
-      <p class="product-card__price-old" v-show="item.discount">
-        {{ calcDiscount(item.price, item.discount) }}₽
+      <p class="product-card__price-old" v-show="kitchen.discountPrice">
+        {{ calcDiscount(kitchen.price, kitchen.discountPrice) }}₽
       </p>
-      <p class="product-card__price">
-        {{ item.price.toLocaleString("ru-RU") }}₽
-      </p>
+      <p class="product-card__price">{{ kitchen.price }}₽</p>
     </div>
-    
   </article>
 </template>
 

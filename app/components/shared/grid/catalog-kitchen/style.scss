@@ -24,12 +24,44 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap-l) 0;
+    gap: var(--gap-l);
 
     @media (max-width: 425px) {
       display: flex;
       flex-direction: column;
       padding: var(--padding-xs);
     }
+  }
+}
+
+.catalog-kitchen-pagination {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Стили для пагинации */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 0.7;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--accent);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  :deep(.swiper-pagination-bullet) {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
   }
 }

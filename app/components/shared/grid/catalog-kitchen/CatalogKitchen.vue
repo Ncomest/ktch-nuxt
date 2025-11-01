@@ -1,12 +1,11 @@
 <script setup>
-import ImageWrapper from "@components/shared/image-wrapper/ImageWrapper.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import kitchensData from "@/json/kitchens.json";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import ProductCard from "../../product-card/ProductCard.vue";
+import KitchenCard from "../../kitchen-card/KitchenCard.vue";
 
 const kitchens = kitchensData;
 </script>
@@ -15,7 +14,7 @@ const kitchens = kitchensData;
   <section class="catalog-kitchen">
     <h2 class="catalog-kitchen__hidden-anchor" id="catalog-kitchen"></h2>
     <Swiper
-      :modules="[Autoplay, Navigation]"
+      :modules="[Autoplay, Navigation, Pagination]"
       :speed="1500"
       :autoplay="{ delay: 8000, pauseOnMouseEnter: true }"
       :space-between="10"
@@ -24,15 +23,40 @@ const kitchens = kitchensData;
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       }"
+      :pagination="{
+        el: '.catalog-kitchen-pagination',
+        clickable: true,
+        type: 'bullets',
+      }"
+      :slides-per-view="1"
+      :breakpoints="{
+        // На мобильных (до 768px) - 1 карточка
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        // На планшетах (768px и выше) - 2 карточки
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        // На десктопах (1024px и выше) - 2 карточки
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      }"
     >
-      <SwiperSlide v-for="(kitchen, index) in kitchens" :key="index">
-        <div class="catalog-kitchen__grid">
-          <ProductCard :key="kitchen.id" :kitchen="kitchen" />
-        </div>
+      <SwiperSlide v-for="(kitchen, index) in kitchens" :key="kitchen.id">
+        <KitchenCard :kitchen="kitchen" />
       </SwiperSlide>
+
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </Swiper>
+
+    <!-- Пагинация -->
+    <div class="catalog-kitchen-pagination"></div>
   </section>
 </template>
 <style src="./style.scss"></style>
