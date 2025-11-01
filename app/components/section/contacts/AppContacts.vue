@@ -38,7 +38,13 @@ import TheLink from "~/components/shared/link/the-link/TheLink.vue";
         <div class="app-contact__contacts-container-block">
           <h2 class="app-contact__contacts-header">График работы:</h2>
           <p>
-            Мы работаем
+            ТРЦ Сити-парк Град:
+            <span class="app-contact__contacts--bold">ежедневно</span> с 10:00 -
+            22:00 без выходных
+          </p>
+
+          <p>
+            ТЦ Воронежский Рынок:
             <span class="app-contact__contacts--bold">ежедневно</span> с 10:00 -
             20:00 без выходных
           </p>
@@ -46,8 +52,8 @@ import TheLink from "~/components/shared/link/the-link/TheLink.vue";
 
         <div class="app-contact__contacts-container-block">
           <h2 class="app-contact__contacts-header">Мы находимся по адресу:</h2>
-          <p>Воронеж, Московский проспект, 90/1</p>
-          <p>ТЦ Воронежский рынок 4 этаж</p>
+          <p>Воронеж, Московский проспект, 90/1 ТЦ Воронежский рынок 4 этаж</p>
+          <p>Воронеж, Парковая 3, ТРЦ Сити-парк Град, цокальный этаж</p>
         </div>
 
         <div class="app-contact__contacts-container-block">

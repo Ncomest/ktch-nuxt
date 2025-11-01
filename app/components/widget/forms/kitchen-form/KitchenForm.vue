@@ -42,16 +42,54 @@ const contactData = ref({
   projectFile: null,
 });
 
+// const formatPhone = () => {
+//   let digits = contactData.value.phone.replace(/\D/g, "");
+
+//   // Если поле пустое или содержит только +, очищаем его
+//   if (digits === "" || contactData.value.phone === "+") {
+//     contactData.value.phone = "";
+//     return;
+//   }
+
+//   // Если начинается с 8, заменяем на +7
+//   if (digits.startsWith("8")) {
+//     digits = "7" + digits.slice(1);
+//   }
+
+//   // Если не начинается с 7, добавляем
+//   if (!digits.startsWith("7")) {
+//     digits = "7" + digits;
+//   }
+
+//   // Обрезаем до 11 цифр (без +)
+//   digits = digits.slice(0, 11);
+
+//   // Форматируем как +7 (XXX) XXX-XX-XX
+//   let formatted = "+7";
+//   if (digits.length > 1) formatted += " (" + digits.slice(1, 4);
+//   if (digits.length >= 4) formatted += ") " + digits.slice(4, 7);
+//   if (digits.length >= 7) formatted += "-" + digits.slice(7, 9);
+//   if (digits.length >= 9) formatted += "-" + digits.slice(9, 11);
+
+//   contactData.value.phone = formatted;
+// };
+
 const formatPhone = () => {
   let digits = contactData.value.phone.replace(/\D/g, "");
 
-  // Если начинается с 8, заменяем на +7
+  // Если поле пустое или содержит только +, очищаем его
+  if (digits === "" || contactData.value.phone === "+") {
+    contactData.value.phone = "";
+    return;
+  }
+
+  // Если начинается с 8, заменяем на 7
   if (digits.startsWith("8")) {
     digits = "7" + digits.slice(1);
   }
 
-  // Если не начинается с 7, добавляем
-  if (!digits.startsWith("7")) {
+  // Если не начинается с 7, добавляем 7 только если есть другие цифры
+  if (!digits.startsWith("7") && digits.length > 0) {
     digits = "7" + digits;
   }
 
@@ -68,8 +106,23 @@ const formatPhone = () => {
   contactData.value.phone = formatted;
 };
 
+const handlePhoneKeydown = (event) => {
+  // Если нажата Backspace и в поле только "+7" или пустое
+  if (
+    event.key === "Backspace" &&
+    (contactData.value.phone === "+7" || contactData.value.phone === "+7 ")
+  ) {
+    contactData.value.phone = "";
+  }
+};
+
 const isValid = computed(() => {
-  return /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(contactData.value.phone);
+  const phone = contactData.value.phone;
+  // Если поле пустое или содержит только базовые символы маски, не считаем ошибкой
+  if (phone === "" || phone === "+7" || phone === "+7 " || phone === "+7 (") {
+    return true;
+  }
+  return /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(phone);
 });
 
 const handleFileUpload = (e) => {
@@ -233,17 +286,19 @@ const submitForm = async () => {
               v-model="contactData.lastName"
               required
             />
-            <input
-              @input="formatPhone"
-              @blur="phoneTouched = true"
-              @focus="phoneTouched = false"
-              type="tel"
-              name="phone"
-              placeholder="+7 ( ___ ) ___ / __ / __"
-              class="kitchen-form__input kitchen-form__input--number"
-              v-model="contactData.phone"
-              required
-            />
+            <ClientOnly>
+              <input
+                v-mask="'+7 (###) ###-##-##'"
+                @blur="phoneTouched = true"
+                @focus="phoneTouched = false"
+                type="tel"
+                name="phone"
+                placeholder="+7 ( ___ ) ___ / __ / __"
+                class="kitchen-form__input kitchen-form__input--number"
+                v-model="contactData.phone"
+                required
+              />
+            </ClientOnly>
             <p
               v-if="phoneTouched && !isValid"
               class="kitchen-form__number-error"
