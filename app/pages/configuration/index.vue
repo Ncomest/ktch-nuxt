@@ -1,4 +1,5 @@
 <script setup>
+import { createNewKitchen, deleteKitchen } from "~/api/api";
 import AppInput from "~/components/shared/input/AppInput.vue";
 import KitchenJSON from "~/json/kitchens.json";
 
@@ -29,18 +30,11 @@ const newKitchen = reactive({
   badge: "",
 });
 
-const submitNewKitchen = () => {
-  // newKitechen отправить запрос на бэк
-};
-
-const handleDeleteKitchen = (id) => {
+// TODO: потом добавить фичу
+const handleChangeKitchen = (id) => {
   console.log("id", id);
-  // Удалить кухню с бэка
-};
-
-const handleChangeKitchen = () => {
   // Внести изменения в карточку кухни
-}
+};
 </script>
 
 <template>
@@ -69,16 +63,17 @@ const handleChangeKitchen = () => {
           <p>изображение: {{ kitchen.image }}</p>
           <p>Описание: {{ kitchen.description }}</p>
           <p>Баджик: {{ kitchen.badge }}</p>
-          <button v-on:click="handleChangeKitchen()">Изменить</button>
+          <!-- <button v-on:click="handleChangeKitchen(kitchen.id)">Изменить</button> -->
           <button
             style="position: absolute; top: 10px; right: 10px"
-            v-on:click="handleDeleteKitchen(kitchen.id)"
+            v-on:click="deleteKitchen(kitchen.id)"
           >
             X
           </button>
         </li>
       </ul>
     </div>
+
     <div
       style="
         border: 1px solid black;
@@ -88,7 +83,7 @@ const handleChangeKitchen = () => {
         row-gap: 10px;
       "
     >
-      <h4 style="font-size: 24px; font-weight: bold;">Добавить кухню</h4>
+      <h4 style="font-size: 24px; font-weight: bold">Добавить кухню</h4>
       <AppInput title="Добавить id" v-model="newKitchen.id" />
       <AppInput title="Название кухни" v-model="newKitchen.name" />
       <AppInput title="Материал" v-model="newKitchen.material" />
@@ -97,7 +92,7 @@ const handleChangeKitchen = () => {
       <AppInput title="Изображение" v-model="newKitchen.image" />
       <AppInput title="Описание" v-model="newKitchen.description" />
       <AppInput title="Баджик" v-model="newKitchen.badge" />
-      <button v-on:click="submitNewKitchen">Добавить</button>
+      <button v-on:click="createNewKitchen">Добавить</button>
     </div>
   </div>
   <div>reviews list</div>
