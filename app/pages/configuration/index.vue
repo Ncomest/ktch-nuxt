@@ -38,6 +38,10 @@ const handleChangeKitchen = (id) => {
 </script>
 
 <template>
+  <h1>в разработке</h1>
+</template>
+
+<!-- <template>
   <div>slider list</div>
   <div>
     <div>
@@ -63,7 +67,7 @@ const handleChangeKitchen = (id) => {
           <p>изображение: {{ kitchen.image }}</p>
           <p>Описание: {{ kitchen.description }}</p>
           <p>Баджик: {{ kitchen.badge }}</p>
-          <!-- <button v-on:click="handleChangeKitchen(kitchen.id)">Изменить</button> -->
+          <button v-on:click="handleChangeKitchen(kitchen.id)">Изменить</button> 
           <button
             style="position: absolute; top: 10px; right: 10px"
             v-on:click="deleteKitchen(kitchen.id)"
@@ -96,6 +100,6 @@ const handleChangeKitchen = (id) => {
     </div>
   </div>
   <div>reviews list</div>
-</template>
+</template> -->
 
 <style src="./configuration.scss" lang="scss"></style>
