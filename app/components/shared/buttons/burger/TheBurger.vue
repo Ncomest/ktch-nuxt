@@ -1,5 +1,5 @@
 <script setup>
-import { useSidePanel } from "@stores/side-panel";
+import { useSidePanel } from "~/src/app/stores/side-panel";
 import { computed } from "vue";
 
 const burger = useSidePanel();

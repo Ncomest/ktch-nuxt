@@ -4,7 +4,7 @@ import TheFooter from "@components/widget/footer/TheFooter.vue";
 import SidePanel from "@components/shared/side-panel/SidePanel.vue";
 import SidePanelBurger from "@components/widget/side-panel-burger/SidePanelBurger.vue";
 
-import { useSidePanel } from "@/stores/side-panel";
+import { useSidePanel } from "~/src/app/stores/side-panel";
 
 const sidePanel = useSidePanel();
 </script>

@@ -1,5 +1,5 @@
 <script setup>
-import { createNewKitchen, deleteKitchen } from "~/api/api";
+import { createNewKitchen, deleteKitchen } from "~/app/api/api";
 import AppInput from "~/components/shared/input/AppInput.vue";
 import KitchenJSON from "~/json/kitchens.json";
 

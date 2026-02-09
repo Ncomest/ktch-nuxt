@@ -19,7 +19,7 @@
       "@/*": ["./app*"],
       "@assets/*": ["./app/assets/*"],
       "@components/*": ["./app/components/*"],
-      "@stores/*": ["./app/stores/*"],
+      "@stores/*": ["./app/src/app/stores/*"],
       "@pages/*": ["./app/pages/*"]
     },
     "types": ["@pinia/nuxt"]

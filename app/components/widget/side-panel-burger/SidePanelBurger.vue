@@ -1,6 +1,6 @@
 <script setup>
 import TheLink from "@components/shared/link/the-link/TheLink.vue";
-import { useSidePanel } from "@stores/side-panel";
+import { useSidePanel } from "~/src/app/stores/side-panel";
 
 const sidePanel = useSidePanel();
 </script>

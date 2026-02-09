@@ -1,5 +1,5 @@
-import { API_URL } from "~/const/consts";
-import type { IKitchen } from "~/types/types";
+import { API_URL } from "~/src/shared/const/consts";
+import type { IKitchen } from "~/src/shared/types/types";
 
 export const createNewKitchen = async (
   kitchen: IKitchen
