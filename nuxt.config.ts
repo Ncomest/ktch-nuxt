@@ -44,12 +44,18 @@ export default defineNuxtConfig({
     },
   },
 
-  alias: {
-    "@": fileURLToPath(new URL("./app", import.meta.url)),
-    "@assets": fileURLToPath(new URL("./app/assets", import.meta.url)),
-    "@components": fileURLToPath(new URL("./app/components", import.meta.url)),
-    "@stores": fileURLToPath(new URL("./app/stores", import.meta.url)),
-    "@pages": fileURLToPath(new URL("./app/pages", import.meta.url)),
+  vite: {
+    resolve: {
+      alias: {
+        "@": fileURLToPath(new URL("./src", import.meta.url)),
+        "@assets": fileURLToPath(new URL("./src/app/assets", import.meta.url)),
+        "@stores": fileURLToPath(new URL("./src/app/stores", import.meta.url)),
+        "@pages": fileURLToPath(new URL("./src/pages", import.meta.url)),
+        "@widgets": fileURLToPath(new URL("./src/widgets", import.meta.url)),
+        "@shared": fileURLToPath(new URL("./src/shared", import.meta.url)),
+        "@entities": fileURLToPath(new URL("./src/entities", import.meta.url)),
+      },
+    },
   },
 
   css: ["@assets/styles/style.scss"],

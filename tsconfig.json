@@ -1,27 +1,16 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./.nuxt/tsconfig.app.json"
-    },
-    {
-      "path": "./.nuxt/tsconfig.server.json"
-    },
-    {
-      "path": "./.nuxt/tsconfig.shared.json"
-    },
-    {
-      "path": "./.nuxt/tsconfig.node.json"
-    }
-  ],
+  "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./app*"],
-      "@assets/*": ["./app/assets/*"],
-      "@components/*": ["./app/components/*"],
-      "@stores/*": ["./app/src/app/stores/*"],
-      "@pages/*": ["./app/pages/*"]
-    },
-    "types": ["@pinia/nuxt"]
-  }
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/app/assets/*"],
+      "@stores/*": ["./src/app/stores/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@shared/*": ["./src/shared/*"]
+    }
+  },
+  "include": ["./src/**/*", "./.nuxt/**/*"]
 }
