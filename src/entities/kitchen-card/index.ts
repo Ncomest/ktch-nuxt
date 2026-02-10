@@ -1,1 +1,1 @@
-export { default as KitchenCard } from "./ui";
+export { KitchenCard } from "./ui";

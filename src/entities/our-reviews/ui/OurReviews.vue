@@ -1,5 +1,5 @@
 <script setup>
-import TheReview from "@components/shared/review/TheReview.vue";
+import { TheReview } from "@shared/ui/review";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
@@ -268,7 +268,7 @@ import { Autoplay, Navigation } from "swiper/modules";
         }"
       >
         <SwiperSlide v-for="review in reviews" :key="review.id">
-          <TheReview :item="review" />
+          <the-review :item="review" />
         </SwiperSlide>
         <template #container-end>
           <div class="swiper-button-prev"></div>

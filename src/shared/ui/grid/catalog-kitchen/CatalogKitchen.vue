@@ -5,7 +5,7 @@ import kitchensData from "@/app/json/kitchens.json";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import KitchenCard from "../../kitchen-card/KitchenCard.vue";
+import { KitchenCard } from "@entities/kitchen-card";
 
 const kitchens = kitchensData;
 </script>
@@ -47,8 +47,8 @@ const kitchens = kitchensData;
         },
       }"
     >
-      <SwiperSlide v-for="(kitchen, index) in kitchens" :key="kitchen.id">
-        <KitchenCard :kitchen="kitchen" />
+      <SwiperSlide v-for="kitchen in kitchens" :key="kitchen.id">
+        <kitchen-card :kitchen="kitchen" />
       </SwiperSlide>
 
       <div class="swiper-button-prev"></div>

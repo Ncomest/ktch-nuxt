@@ -4,7 +4,7 @@ import "swiper/css/pagination";
 
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination } from "swiper/modules";
-import ImageWrapper from "@components/shared/image-wrapper/ImageWrapper.vue";
+import { ImageWrapper } from "@shared/ui/image-wrapper";
 
 const slides = [
   { ktch: "/images/classic/kitchen-one.webp", id: 1 },
@@ -26,7 +26,7 @@ const slides = [
       :autoplay="{ delay: 15000 }"
     >
       <SwiperSlide v-for="i in slides" :key="i.id">
-        <ImageWrapper
+        <image-wrapper
           :src="i.ktch"
           alt="Kitchen"
           class="swiper__image-wrapper"

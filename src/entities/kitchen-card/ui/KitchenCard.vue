@@ -1,5 +1,5 @@
 <script setup>
-import ImageWrapper from "../image-wrapper/ImageWrapper.vue";
+import { ImageWrapper } from "@shared/ui/image-wrapper";
 
 const props = defineProps({
   kitchen: {
@@ -22,7 +22,7 @@ const badgeText = {
 <template>
   <article class="kitchen-card">
     <div class="kitchen-card__image-wrapper">
-      <ImageWrapper
+      <image-wrapper
         class="kitchen-card__image"
         :alt="`Кухня ${kitchen.name} - ${kitchen.type}, ${kitchen.material}`"
         :src="kitchen.image"

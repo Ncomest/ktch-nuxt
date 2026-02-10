@@ -3,7 +3,7 @@ import { computed, onUnmounted, ref } from "vue";
 const apiUrl = import.meta.env.VITE_API_URL;
 
 import question from "@/app/json/ask-question.json";
-import CustomDropDown from "@/components/shared/drop-down/custom-drop-down/CustomDropDown.vue";
+import { CustomDropDown } from "@shared/ui/drop-down";
 
 const importQuestion = ref(question);
 const questionData = ref({});
@@ -246,7 +246,7 @@ const submitForm = async () => {
       <div class="kitchen-form__content">
         <div class="kitchen-form__content-left">
           <legend class="kitchen-form__legend">Выберите данные кухни:</legend>
-          <CustomDropDown
+          <custom-drop-down
             v-for="item in importQuestion"
             :question="item.question"
             :list="item.ask"

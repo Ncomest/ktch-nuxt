@@ -1,5 +1,5 @@
 <script setup>
-import ButtonOrder from "@/components/shared/buttons/order/ButtonOrder.vue";
+import { ButtonOrder } from "@shared/ui/buttons/order";
 defineProps({
   overlay: Boolean,
   required: true,
@@ -8,7 +8,7 @@ defineProps({
 <template>
   <section class="the-order">
     <div class="the-order__overlay" v-if="overlay"></div>
-    <ButtonOrder />
+    <button-order />
   </section>
 </template>
 <style src="./TheOrder.scss"></style>

@@ -1,9 +1,9 @@
 <script setup>
 import { ref, computed } from "vue";
-import ImageWrapper from "@components/shared/image-wrapper/ImageWrapper.vue";
+import { ImageWrapper } from "@shared/ui/image-wrapper";
 import noimage from "/images/reviews/noimage.webp";
 import noavatar from "/images/avatars/nophoto.webp";
-import AppRate from "@components/shared/rate/AppRate.vue";
+import { AppRate } from "@shared/ui/rate";
 
 const props = defineProps({
   item: { type: Object, required: true },
@@ -18,7 +18,7 @@ const displayedText = computed(() =>
   isExpanded.value
     ? props.item.review
     : props.item.review.slice(0, maxLength) +
-      (showToggleButton.value ? "..." : "")
+      (showToggleButton.value ? "..." : ""),
 );
 
 const toggleReview = () => {
@@ -28,7 +28,7 @@ const toggleReview = () => {
 
 <template>
   <div class="the-review">
-    <ImageWrapper :src="props.item.image || noimage" :alt="props.item.name" />
+    <image-wrapper :src="props.item.image || noimage" :alt="props.item.name" />
 
     <div class="the-review__user-container">
       <img
@@ -39,7 +39,7 @@ const toggleReview = () => {
       <h3 class="the-review__name">{{ props.item.name }}</h3>
     </div>
 
-    <AppRate :value="props.item.rate" />
+    <app-rate :value="props.item.rate" />
     <p>{{ props.item.date }}</p>
 
     <h5 class="the-review__price">
