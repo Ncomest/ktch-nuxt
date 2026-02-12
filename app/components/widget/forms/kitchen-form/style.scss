@@ -176,6 +176,11 @@
     }
   }
 
+  &__checkbox {
+    height: 18px;
+    width: 18px;
+  }
+
   &__submit {
     width: 200px;
     margin-left: auto;
@@ -190,6 +195,11 @@
 
     &:hover {
       background-color: #0056b3;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #727272;
     }
   }
 }

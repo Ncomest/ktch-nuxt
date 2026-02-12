@@ -12,6 +12,7 @@ const popUpMessage = ref("");
 const isOkRes = ref(null);
 const phoneTouched = ref(false);
 let timeoutID = null;
+const isChecked = ref(true);
 
 const showPopUpMessage = (message, state) => {
   popUpMessage.value = message;
@@ -42,80 +43,6 @@ const contactData = ref({
   projectFile: null,
 });
 
-// const formatPhone = () => {
-//   let digits = contactData.value.phone.replace(/\D/g, "");
-
-//   // Если поле пустое или содержит только +, очищаем его
-//   if (digits === "" || contactData.value.phone === "+") {
-//     contactData.value.phone = "";
-//     return;
-//   }
-
-//   // Если начинается с 8, заменяем на +7
-//   if (digits.startsWith("8")) {
-//     digits = "7" + digits.slice(1);
-//   }
-
-//   // Если не начинается с 7, добавляем
-//   if (!digits.startsWith("7")) {
-//     digits = "7" + digits;
-//   }
-
-//   // Обрезаем до 11 цифр (без +)
-//   digits = digits.slice(0, 11);
-
-//   // Форматируем как +7 (XXX) XXX-XX-XX
-//   let formatted = "+7";
-//   if (digits.length > 1) formatted += " (" + digits.slice(1, 4);
-//   if (digits.length >= 4) formatted += ") " + digits.slice(4, 7);
-//   if (digits.length >= 7) formatted += "-" + digits.slice(7, 9);
-//   if (digits.length >= 9) formatted += "-" + digits.slice(9, 11);
-
-//   contactData.value.phone = formatted;
-// };
-
-const formatPhone = () => {
-  let digits = contactData.value.phone.replace(/\D/g, "");
-
-  // Если поле пустое или содержит только +, очищаем его
-  if (digits === "" || contactData.value.phone === "+") {
-    contactData.value.phone = "";
-    return;
-  }
-
-  // Если начинается с 8, заменяем на 7
-  if (digits.startsWith("8")) {
-    digits = "7" + digits.slice(1);
-  }
-
-  // Если не начинается с 7, добавляем 7 только если есть другие цифры
-  if (!digits.startsWith("7") && digits.length > 0) {
-    digits = "7" + digits;
-  }
-
-  // Обрезаем до 11 цифр (без +)
-  digits = digits.slice(0, 11);
-
-  // Форматируем как +7 (XXX) XXX-XX-XX
-  let formatted = "+7";
-  if (digits.length > 1) formatted += " (" + digits.slice(1, 4);
-  if (digits.length >= 4) formatted += ") " + digits.slice(4, 7);
-  if (digits.length >= 7) formatted += "-" + digits.slice(7, 9);
-  if (digits.length >= 9) formatted += "-" + digits.slice(9, 11);
-
-  contactData.value.phone = formatted;
-};
-
-const handlePhoneKeydown = (event) => {
-  // Если нажата Backspace и в поле только "+7" или пустое
-  if (
-    event.key === "Backspace" &&
-    (contactData.value.phone === "+7" || contactData.value.phone === "+7 ")
-  ) {
-    contactData.value.phone = "";
-  }
-};
-
 const isValid = computed(() => {
   const phone = contactData.value.phone;
   // Если поле пустое или содержит только базовые символы маски, не считаем ошибкой
@@ -142,7 +69,6 @@ const submitForm = async () => {
       formData.append("projectFile", contactData.value.projectFile);
     }
 
-    // console.log(questionData.value);
     for (const value of Object.values(questionData.value)) {
       formKitchen.push(value);
     }
@@ -157,7 +83,7 @@ const submitForm = async () => {
     if (!response.ok) {
       const errData = await response.json().catch(() => ({}));
       throw new Error(
-        errData.message || `HTTP error! status: ${response.status}`
+        errData.message || `HTTP error! status: ${response.status}`,
       );
     }
 
@@ -263,7 +189,7 @@ const submitForm = async () => {
               @input="
                 contactData.firstName = $event.target.value.replace(
                   /[^A-Za-zА-Яа-яЁё]/g,
-                  ''
+                  '',
                 )
               "
               name="firstName"
@@ -277,7 +203,7 @@ const submitForm = async () => {
               @input="
                 contactData.lastName = $event.target.value.replace(
                   /[^A-Za-zА-Яа-яЁё]/g,
-                  ''
+                  '',
                 )
               "
               name="lastName"
@@ -319,10 +245,30 @@ const submitForm = async () => {
               />
             </label>
           </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="consent"
+              v-model="isChecked"
+              class="kitchen-form__checkbox"
+            />
+            <label for="consent" class="kitchen-form__checkbox-label">
+              Я согласен с
+              <RouterLink to="/policy">условиями</RouterLink>
+              обработки персональных данных
+            </label>
+          </div>
         </div>
       </div>
 
-      <button type="submit" class="kitchen-form__submit">Отправить</button>
+      <button
+        type="submit"
+        class="kitchen-form__submit"
+        :disabled="!isChecked || !isValid"
+      >
+        Отправить
+      </button>
     </form>
   </section>
 </template>
