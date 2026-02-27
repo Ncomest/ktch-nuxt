@@ -21,6 +21,28 @@
     color: var(--text-color);
   }
 
+  &__cta-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    justify-content: end;
+  }
+
+  &__cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 18px;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

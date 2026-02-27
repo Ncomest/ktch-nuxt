@@ -179,6 +179,39 @@
   &__checkbox {
     height: 18px;
     width: 18px;
+    appearance: none;
+    border: 2px solid red;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  &__checkbox:checked {
+    background-color: var(--green, #28a745);
+    border-color: var(--green, #28a745);
+  }
+
+  &__checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: -2px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    pointer-events: none;
+    display: block;
+  }
+
+  &__checkbox-label {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--dark-gray);
   }
 
   &__submit {
