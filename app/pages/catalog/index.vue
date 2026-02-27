@@ -103,10 +103,42 @@ watch([typeFilter, materialFilter, searchQuery], () => {
     currentPage.value = 1;
   }
 });
+
+definePageMeta({
+  title: "Каталог кухонь на заказ в Воронеже | Графские кухни",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Каталог кухонь на заказ «Графские кухни» в Воронеже. Подберите планировку, стиль и материалы, сравните цены и оформите заказ напрямую от производителя.",
+    },
+    {
+      name: "keywords",
+      content:
+        "каталог кухонь Воронеж, кухни на заказ каталог, графские кухни каталог, кухни под заказ цены, кухни от производителя каталог",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:site_name", content: "Графские кухни" },
+    {
+      property: "og:title",
+      content: "Каталог кухонь на заказ в Воронеже | Графские кухни",
+    },
+    {
+      property: "og:description",
+      content:
+        "Каталог кухонь на заказ «Графские кухни» в Воронеже. Реальные цены, фото готовых проектов и удобные фильтры по параметрам.",
+    },
+    { property: "og:image", content: "https://grafckie.ru/og-image.webp" },
+    { property: "og:url", content: "https://grafckie.ru/catalog" },
+  ],
+  link: [{ rel: "canonical", href: "https://grafckie.ru/catalog" }],
+});
 </script>
 
 <template>
   <main class="app-catalog">
+    <h1 class="visually-hidden">Каталог кухонь «Графские кухни»</h1>
+
     <ImageBanner />
 
     <the-container title="Каталог">

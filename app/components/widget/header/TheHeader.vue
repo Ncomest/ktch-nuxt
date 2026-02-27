@@ -5,9 +5,9 @@ import TheBurger from "@components/shared/buttons/burger/TheBurger.vue";
 </script>
 
 <template>
-  <div class="the-header">
+  <header class="the-header" role="banner">
     <the-logo />
-    <nav class="the-header__navbar">
+    <nav class="the-header__navbar" aria-label="Основная навигация по сайту">
       <the-link
         class="the-header__button-buy"
         text="Получить проект"
@@ -29,6 +29,8 @@ import TheBurger from "@components/shared/buttons/burger/TheBurger.vue";
         ><svg
           height="40px"
           width="40px"
+          aria-hidden="true"
+          focusable="false"
           version="1.1"
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
@@ -91,6 +93,6 @@ import TheBurger from "@components/shared/buttons/burger/TheBurger.vue";
       >
     </div>
     <the-burger />
-  </div>
+  </header>
 </template>
 <style src="./style.scss"></style>

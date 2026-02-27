@@ -9,7 +9,7 @@
     <priority>1.0</priority>
   </url>
 
-    <!-- О компании -->
+  <!-- О компании -->
   <url>
     <loc>https://grafckie.ru/about</loc>
     <lastmod>2025-09-28</lastmod>
@@ -17,12 +17,28 @@
     <priority>0.8</priority>
   </url>
 
-   <!-- Отзывы -->
+  <!-- Отзывы -->
   <url>
     <loc>https://grafckie.ru/reviews</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Каталог кухонь -->
+  <url>
+    <loc>https://grafckie.ru/catalog</loc>
+    <lastmod>2025-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Политика конфиденциальности -->
+  <url>
+    <loc>https://grafckie.ru/policy</loc>
+    <lastmod>2025-09-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
   <!-- Социальные и мессенджеры -->

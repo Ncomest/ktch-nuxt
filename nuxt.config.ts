@@ -61,4 +61,14 @@ export default defineNuxtConfig({
   },
 
   modules: ["@nuxtjs/robots", "@pinia/nuxt"],
+
+  robots: {
+    rules: [
+      {
+        UserAgent: "*",
+        Allow: "/",
+        Sitemap: ["https://grafckie.ru/sitemap.xml"],
+      },
+    ],
+  },
 });

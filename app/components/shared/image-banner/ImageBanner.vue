@@ -9,6 +9,7 @@ import image from "/images/kitchens/kitchen_1_11zon.webp";
         class="image-banner__image-wrapper__image"
         :src="image"
         alt="заказать кухню"
+        loading="lazy"
       />
     </div>
   </section>

@@ -7,6 +7,7 @@
         <img
           src="/designer/designer_2_11zon.webp"
           alt="Кристина Палютина дизайнер кухонь в Воронеже 'Графские кухни'"
+          loading="lazy"
         />
       </div>
 

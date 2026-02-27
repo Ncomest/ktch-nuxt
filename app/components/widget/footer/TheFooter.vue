@@ -7,6 +7,7 @@
           class="the-footer__image-wrapper__image"
           src="/og-image.webp"
           alt="Наша площадка"
+          loading="lazy"
         />
       </div>
     </div>
@@ -19,6 +20,8 @@
             ><svg
               height="30px"
               width="30px"
+              aria-hidden="true"
+              focusable="false"
               version="1.1"
               id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
@@ -85,6 +88,8 @@
             ><svg
               width="30px"
               height="30px"
+              aria-hidden="true"
+              focusable="false"
               viewBox="0 0 256 256"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -122,6 +127,8 @@
             ><svg
               width="30px"
               height="30px"
+              aria-hidden="true"
+              focusable="false"
               viewBox="0 0 1024 1024"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -143,6 +150,8 @@
             ><svg
               width="30px"
               height="30px"
+              aria-hidden="true"
+              focusable="false"
               viewBox="0 0 48 48"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -179,6 +188,8 @@
             ><svg
               height="30px"
               width="30px"
+              aria-hidden="true"
+              focusable="false"
               version="1.1"
               id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"

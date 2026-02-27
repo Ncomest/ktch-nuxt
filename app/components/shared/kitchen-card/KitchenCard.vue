@@ -6,6 +6,10 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  loading: {
+    type: String,
+    default: "lazy",
+  },
 });
 
 const formatPrice = (price) => {
@@ -26,6 +30,7 @@ const badgeText = {
         class="kitchen-card__image"
         :alt="`Кухня ${kitchen.name} - ${kitchen.type}, ${kitchen.material}`"
         :src="kitchen.image"
+        :loading="loading"
       />
 
       <span
