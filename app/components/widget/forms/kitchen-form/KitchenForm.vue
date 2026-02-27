@@ -83,7 +83,7 @@ const submitForm = async () => {
     if (!response.ok) {
       const errData = await response.json().catch(() => ({}));
       throw new Error(
-        errData.message || `HTTP error! status: ${response.status}`,
+        errData.message || `HTTP error! status: ${response.status}`
       );
     }
 
@@ -189,7 +189,7 @@ const submitForm = async () => {
               @input="
                 contactData.firstName = $event.target.value.replace(
                   /[^A-Za-zА-Яа-яЁё]/g,
-                  '',
+                  ''
                 )
               "
               name="firstName"
@@ -203,7 +203,7 @@ const submitForm = async () => {
               @input="
                 contactData.lastName = $event.target.value.replace(
                   /[^A-Za-zА-Яа-яЁё]/g,
-                  '',
+                  ''
                 )
               "
               name="lastName"
@@ -254,9 +254,11 @@ const submitForm = async () => {
               class="kitchen-form__checkbox"
             />
             <label for="consent" class="kitchen-form__checkbox-label">
-              Я согласен с
-              <RouterLink to="/policy">условиями</RouterLink>
-              обработки персональных данных
+              Я даю согласие на
+              <RouterLink to="/policy"
+                >обработку персональных данных</RouterLink
+              >
+              в соответствии с Политикой конфиденциальности
             </label>
           </div>
         </div>
