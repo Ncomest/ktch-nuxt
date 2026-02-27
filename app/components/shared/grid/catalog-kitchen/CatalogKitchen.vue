@@ -28,7 +28,12 @@ const showMoreKitchens = () => {
       <span style="margin-right: 16px; font-size: 18px; font-weight: 500">
         Посмотреть каталог
       </span>
-      <RouterLink to="/catalog" class="catalog-kitchen__cta-btn">
+      <RouterLink
+        to="/catalog"
+        class="catalog-kitchen__cta-btn"
+        aria-label="Показать ещё кухни из каталога"
+        aria-controls="catalog-kitchen-slider"
+      >
         <span style="display: inline-flex; align-items: center">
           <!-- Arrow SVG icon (right arrow) -->
           <svg
@@ -81,7 +86,10 @@ const showMoreKitchens = () => {
         },
       }"
     >
-      <SwiperSlide v-for="(kitchen, index) in visibleKitchens" :key="kitchen.id">
+      <SwiperSlide
+        v-for="(kitchen, index) in visibleKitchens"
+        :key="kitchen.id"
+      >
         <KitchenCard
           :kitchen="kitchen"
           :loading="index < 2 ? 'eager' : 'lazy'"
@@ -94,17 +102,6 @@ const showMoreKitchens = () => {
 
     <!-- Пагинация -->
     <div class="catalog-kitchen-pagination"></div>
-
-    <button
-      v-if="hasMoreKitchens"
-      class="catalog-kitchen__show-more"
-      type="button"
-      @click="showMoreKitchens"
-      aria-label="Показать ещё кухни из каталога"
-      aria-controls="catalog-kitchen-slider"
-    >
-      Показать ещё кухни
-    </button>
   </section>
 </template>
 <style src="./style.scss"></style>
