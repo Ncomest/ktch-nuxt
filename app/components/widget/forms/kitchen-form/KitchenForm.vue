@@ -7,6 +7,7 @@ import CustomDropDown from "@/components/shared/drop-down/custom-drop-down/Custo
 
 const importQuestion = ref(question);
 const questionData = ref({});
+const activeDropDown = ref(null);
 const isPopupOpen = ref(false);
 const popUpMessage = ref("");
 const isOkRes = ref(null);
@@ -177,7 +178,9 @@ const submitForm = async () => {
             :list="item.ask"
             :key="item.question"
             :modelValue="questionData[item.question] ?? null"
+            :isOpen="activeDropDown === item.question"
             @update:modelValue="(value) => handleAnswer(item.question, value)"
+            @open="(key) => (activeDropDown = key)"
           />
         </div>
 
